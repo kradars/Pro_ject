@@ -1,0 +1,52 @@
+<div class="table-responsive">
+  <table class="table table-dark table-hover" >
+    <tbody >
+        <TH >SanctionId</TH>
+        <TH>LonecaseNo</TH>
+        <TH>OfferletterAcceptedDate</TH>
+        <TH>AmountPayType</TH>
+        <TH>TotalAmount</TH>
+        <TH>BankName</TH>
+        <TH>AccoutNumber</TH>
+        <TH>IFSCCode</TH>
+        <TH>AccountType</TH>
+        <TH>TransferAmount</TH>
+        <TH>PaymentStatus</TH>
+        <TH>AmountPaidDate</TH>
+        <TH>Tenure</TH>
+        <th>Payment</th>
+        <TH>Edit</TH>
+        <TH>Delete</TH>
+      <tr *ngFor="let li of listDis">
+        <td align="center">{{li.sanctionId}}</td>
+        <td align="center">{{li.lonecaseno}}</td>
+        <td align="center">{{li.offerletterAcceptedDate}}</td>
+        <td align="center">{{li.amountPayType}}</td>
+        <td align="center">{{li.totalAmount}}</td>
+        <td align="center">{{li.bankName}}</td>
+        <td align="center">{{li.accoutNumber}}</td>
+        <td align="center">{{li.ifsccode}}</td>
+        <td align="center">{{li.accountType}}</td>
+        <td align="center">{{li.transferAmount}}</td>
+        <td align="center">{{li.paymentStatus}}</td>
+        <td align="center">{{li.amountPaidDate}}</td> 
+        <td align="center">{{li.tenure}}</td>
+        <!-- <td><button class="button" routerLink="emipay">Payment</button></td>-->
+        <td><a class="nav-link" [routerLink]="['emipay',li.sanctionId]">Payment</a>
+
+        </td>
+        <td><a class="btn">
+          <i class="fa fa-edit"></i>
+        </a>
+        </td>
+        <td><a class="btn">
+          <i class="fa fa-trash" (click)="deleteData(li.sanctionId)"></i>
+        </a>
+        </td>
+        </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+<router-outlet></router-outlet>

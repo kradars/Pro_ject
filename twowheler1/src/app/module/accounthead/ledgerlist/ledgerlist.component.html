@@ -1,0 +1,56 @@
+<div class="table-responsive ">
+    <table class="table table-striped table-dark" border="1">
+        <tbody>
+            <tr class="bg-info"> 
+                <th> ledgerId</th>
+                <th> ledgerCreatedDate</th>
+                <th> totalLoanAmount</th>
+                <th> payableAmountwithInterest</th>
+                <th> tenure</th>
+                <th> monthlyEMI</th>
+                <th> amountPaidtillDate</th>
+                <th> remainingAmount</th>
+                <th> nextEMIDateStart</th>
+                <th> nextEMIDateEnd</th>
+                <th> defaulterCount</th>
+                <th> paymentStatus</th>
+                <th> previousEMIStatus</th>
+                <th> currentmonthEMIStatus</th>
+                <th> loanEndDate</th>
+                <th> loanStatus</th>
+                <th> Action</th>
+            </tr>
+        </tbody>
+            <tr *ngFor="let li of ledgerlist">
+                <td>{{li.ledgerId}}</td>
+                <td>{{li.ledgerCreatedDate}}</td>
+                <td>{{li.totalLoanAmount}}</td>
+                <td>{{li.payableAmountwithInterest}}</td>
+                <td>{{li.tenure}}</td>
+                <td>{{li.monthlyEMI}}</td>
+                <td>{{li.amountPaidtillDate}}</td>
+                <td>{{li.remainingAmount}}</td>
+                <td>{{li.nextEMIDateStart}}</td>
+                <td>{{li.nextEMIDateEnd}}</td>
+                <td>{{li.defaulterCount}}</td>
+                <td>{{li.paymentStatus}}</td>
+                <td>{{li.previousEMIStatus}}</td>
+                <td>{{li.currentmonthEMIStatus}}</td>
+                <td>{{li.loanEndDate}}</td>
+                <td>{{li.loanStatus}}</td>
+                <td><a [routerLink]="['ledgerlist',li.ledgerId]" >show details</a>  
+                    <a class="btn" [routerLink]="['ledgerupdate']" [state]="li">
+                        <i class="fa fa-edit" style="color: rgb(234, 229, 229);"></i>
+                    </a>
+                <a class="btn">
+                        <i class="fa fa-trash " (click)="deleteledgerlist(li.ledgerId)"></i>
+                    </a>
+                </td>
+            </tr>
+       
+    </table>
+    
+        <button class="btn btn-info float-right" (click)="getback()">Go Back</button>
+        <!-- <a class="btn btn-info float-right" routerLink="/employee">Back</a> -->
+    
+</div>

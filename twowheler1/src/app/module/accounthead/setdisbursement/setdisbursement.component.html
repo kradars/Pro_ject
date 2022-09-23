@@ -1,0 +1,64 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> 
+
+    <h3 style="text-align: center; color: rgb(11, 0, 211);">Disbursement</h3>
+    <div class="jumbotron"style="text-align:center" >
+    <table class="table table-dark center " style="text-align:center" >
+        <tr>
+            <td>Loan Case No</td>
+            <td> <input type="number" formControlName="lonecaseno" placeholder="Enter Loan Case No"></td>
+        </tr>
+        <tr>
+            <td>OFAD</td>
+            <td> <input type="text" formControlName="offerletterAcceptedDate" placeholder="Enter Offerletter accept date"></td>
+        </tr>
+        <tr>
+            <td> AmountPay Type</td>
+            <td> <input type="text" formControlName="amountPayType" placeholder="Enter Ammount pay type"></td>
+        </tr>
+        <tr>
+            <td> TotalAmount</td>
+            <td> <input type="number" formControlName="totalAmount" placeholder="enter Total Amount"></td>
+        </tr>
+        <tr>
+            <td> BankName</td>
+            <td> <input type="text" formControlName="bankName" placeholder="enter Bank Name"></td>
+        </tr>
+        <tr>
+            <td> AccoutNumber</td>
+            <td><input type="number" formControlName="accoutNumber" placeholder="enter Account Number"></td>
+        </tr>
+
+        <tr>
+            <td> IFSCCode</td>
+            <td><input type="text" formControlName="ifsccode" placeholder="enter ifsc code"></td>
+        </tr>
+        <tr>
+            <td> AccountType</td>
+            <td><input type="text" formControlName="accountType" placeholder="enter Account Type"></td>
+        </tr>
+        <tr>
+            <td> TransferAmount</td>
+            <td><input type="number" formControlName="transferAmount" placeholder="enter Transfer Amount"></td>
+        </tr>
+        <tr>
+            <td> PaymentStatus</td>
+            <td><input type="text" formControlName="paymentStatus" placeholder="Payment Status"></td>
+        </tr>
+
+        <tr>
+            <td> AmountPaidDate</td>
+            <td><input type="text" formControlName="amountPaidDate" placeholder="AmountPaid date"></td>
+        </tr>
+        <tr>
+            <td>Tenure</td>
+            <td><input type="number" formControlName="tenure" placeholder="Tenure"></td>
+        </tr>
+
+    </table>
+    <button class="btn btn-primary" type="submit">Submit</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" type="submit" (click)="goBack()"> BACK </button>
+  
+</div>
+</form>
+
+

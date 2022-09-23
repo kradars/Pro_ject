@@ -1,0 +1,95 @@
+<!-- <p>emipayment works!</p>
+<div class="table-responsive"style="text-align:center" >
+    <table class="table table-dark center " style="text-align:center" >
+        <tbody>
+        <th>SanctionId</th>
+        <th>Loan Case No</th>
+        <th>OfferletterAcceptedDate</th>
+        <th>AmountPay Type</th>
+        <th>TotalAmount</th>
+        <th>BankName</th>
+        <th>AccoutNumber</th>
+        <th>IFSCCode</th>
+        <th>AccountType</th>
+        <th>TransferAmount</th>
+        <th>PaymentStatus</th>
+        <th>AmountPaidDate</th>
+        <th>Tenure</th>
+        </tbody>
+        <tr>
+            
+            <td> <input type="text" value={{disbursementObj.sanctionId}}></td>
+            <td> <input type="text" value={{disbursementObj.lonecaseno}}></td>
+            <td> <input type="text" value={{disbursementObj.offerletterAcceptedDate}}></td>
+            <td> <input type="text" value={{disbursementObj.amountPayType}}></td>
+            <td> <input type="text" value={{disbursementObj.totalAmount}}></td>
+            <td> <input type="text" value={{disbursementObj.bankName}}></td>
+            <td> <input type="text" value={{disbursementObj.accoutNumber}}></td>
+            <td> <input type="text" value={{disbursementObj.ifsccode}}></td>
+            <td> <input type="text" value={{disbursementObj.accountType}}></td>
+            <td> <input type="text" value={{disbursementObj.transferAmount}}></td>
+            <td> <input type="text" value={{disbursementObj.paymentStatus}}></td>
+            <td> <input type="text" value={{disbursementObj.amountPaidDate}}></td>
+            <td> <input type="text" value={{disbursementObj.tenure}}></td>
+            
+             <tr *ngFor="let li of disbursementObj">
+                <td>{{li.ledgerId}}</td>
+                <td>{{li.ledgerCreatedDate}}</td>
+                <td>{{li.totalLoanAmount}}</td>
+                <td>{{li.payableAmountwithInterest}}</td>
+                <td>{{li.tenure}}</td>
+                <td>{{li.monthlyEMI}}</td>
+                <td>{{li.amountPaidtillDate}}</td>
+                <td>{{li.remainingAmount}}</td>
+                <td>{{li.nextEMIDateStart}}</td>
+                <td>{{li.nextEMIDateEnd}}</td>
+                <td>{{li.defaulterCount}}</td>
+                <td>{{li.paymentStatus}}</td>
+                <td>{{li.previousEMIStatus}}</td>
+                <td>{{li.currentmonthEMIStatus}}</td>
+                <td>{{li.loanEndDate}}</td>
+                <td>{{li.loanStatus}}</td>  -->
+        <!-- </tr> 
+   
+    </table>
+    <button class="btn btn-primary" type="submit">Submit</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" type="submit" (click)="goBack()"> BACK </button>
+  
+</div>  -->
+
+<p>emipayment works!</p>
+<div class="jumbotron"style="text-align:center" >
+    <table class="table table-dark center " style="text-align:center" >
+        <tbody>
+            <!-- <th>SanctionId</th>
+            <th>Loan Case No</th> 
+          <th>Tenure</th> -->
+            
+            <th>TotalAmount</th>
+            <th>TransferAmount</th>
+            <th>EMI PAY</th>
+            <TH>NOT PAID</TH>
+            
+           </tbody>
+           <tr *ngFor="let li of disbursementObj">
+            <!-- <td>{{li.sanctionId}}</td>
+            <td>{{li.lonecaseno}}</td>
+        <td>{{li.tenure}}</td> -->
+            
+            <td>{{li.totalAmount}}</td>
+            <td>{{li.transferAmount}}</td>
+            <td><button class="button" >EMI PAY</button></td>
+            <td><button class="button1" (click)="defaultCheck()">NOT PAID</button></td>
+    </tr> 
+            
+            <!-- <tr>
+            <td> {{disbursementObj.sanctionId}}</td>
+            <td> {{disbursementObj.lonecaseno}}</td>
+            <td> {{disbursementObj.totalAmount}}</td>
+            
+            <td> {{disbursementObj.transferAmount}}</td>
+            <td> {{disbursementObj.tenure}}</td>
+        </tr> -->
+    </table>
+    <button class="btn btn-info float-right" (click)="getback()">Go Back</button>
+</div>

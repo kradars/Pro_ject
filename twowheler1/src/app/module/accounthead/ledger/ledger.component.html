@@ -1,0 +1,76 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()"> 
+
+    <h3 style="text-align: center; color: rgb(11, 0, 211);">generate ledger form</h3>
+    <div class="jumbotron"style="text-align:center" >
+    <table class="table table-dark center " style="text-align:center" >
+        <tr>
+            <td> ledger created date</td>
+            <td> <input type="text" formControlName="ledgerCreatedDate" placeholder="Enter ledger created date"></td>
+        </tr>
+        <tr>
+            <td> Total loan Amount</td>
+            <td> <input type=number formControlName="totalLoanAmount" placeholder="Enter total loan Amount"></td>
+        </tr>
+        <tr>
+            <td>payable Amount with interest</td>
+            <td> <input type=number formControlName="payableAmountwithInterest" placeholder="Enter payable Amount with Interest"></td>
+        </tr>
+        <tr>
+            <td> Tenure</td>
+            <td> <input type=number formControlName="tenure" placeholder="enter Tenure"></td>
+        </tr>
+        <tr>
+            <td> monthlyEMI</td>
+            <td> <input type="text" formControlName="monthlyEMI" placeholder="enter monthlyEMI"></td>
+        </tr>
+        <tr>
+            <td> amount Paid till Date</td>
+            <td><input type=number formControlName="amountPaidtillDate" placeholder="enter amountPaidtillDate"></td>
+        </tr>
+
+        <tr>
+            <td> Remaining Amount</td>
+            <td><input type=number formControlName="remainingAmount" placeholder="enter remaining Amount"></td>
+        </tr>
+        <tr>
+            <td> next EMI date Start</td>
+            <td><input type="text" formControlName="nextEMIDateStart" placeholder="enter next EMI date Start"></td>
+        </tr>
+        <tr>
+            <td> next EMI date End</td>
+            <td><input type="text" formControlName="nextEMIDateEnd" placeholder="enter next EMI date End"></td>
+        </tr>
+        <tr>
+            <td> defaulter Count</td>
+            <td><input type=number formControlName="defaulterCount" placeholder="enter defaulter Count"></td>
+        </tr>
+
+        <tr>
+            <td> Payment Status</td>
+            <td><input type="text" formControlName="paymentStatus" placeholder="enter payment Status"></td>
+        </tr>
+
+        <tr>
+            <td> previous EMI Status</td>
+            <td><input type="text" formControlName="previousEMIStatus" placeholder="enter previous EMI Status"></td>
+        </tr>
+
+        <tr>
+            <td> Current month EMI Status</td>
+            <td><input type="text" formControlName="currentmonthEMIStatus" placeholder="enter current month EMI Status"></td>
+        </tr>
+        <tr>
+            <td>loan End Date</td>
+            <td><input type="text" formControlName="loanEndDate" placeholder="enter loan end Date"></td>
+        </tr>
+        <tr>
+            <td> loan Status</td>
+            <td><input type="text" formControlName="loanStatus" placeholder="enter loan Status"></td>
+        </tr>
+
+    </table>
+    <button class="btn btn-primary" type="submit">Submit</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" type="submit" (click)="goBack()"> BACK </button>
+  
+</div>
+</form>
